@@ -10,8 +10,8 @@ function ResultTable() {
         const fetchAllGames = async()=> {
                 const response = await axios.get('https://free-to-play-games-database.p.rapidapi.com/api/games', {
                 headers: {
-                  'x-rapidapi-host': 'free-to-play-games-database.p.rapidapi.com',
-                  'x-rapidapi-key': '8dd6507080mshe13590972968db9p1d40b7jsn10bdf0273fd8'
+                  'x-rapidapi-host': process.env.REACT_APP_X_RAPIDAPI_HOST,
+                  'x-rapidapi-key': process.env.REACT_APP_X_RAPIDAPI_KEY
                 }
             }
             )        
