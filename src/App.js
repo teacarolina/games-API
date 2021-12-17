@@ -7,6 +7,13 @@ import CategoryResult from './components/search/CategoryResult';
 function App() {
 
   const [category, setCategoryGame] = useState('')
+
+  if(category != '') {
+    localStorage.setItem('category', 'exists')
+  } else {
+    localStorage.removeItem('category')
+  }
+  
   return (
       <div className="App">
       
